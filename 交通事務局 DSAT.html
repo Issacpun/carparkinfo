@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://www.dsat.gov.mo/dsat/carpark_realtime.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="x-ua-compatible" content="IE=10">
+
+<title>交通事務局 DSAT</title>
+<script src="./交通事務局 DSAT_files/jquery-1.8.3.min.js.下載"></script>  
+<script src="./交通事務局 DSAT_files/menu.js.下載"></script>
+<script src="./交通事務局 DSAT_files/intro.js.下載"></script>
+<script src="./交通事務局 DSAT_files/dw_tabs.js.下載" type="text/javascript"></script>
+<script src="./交通事務局 DSAT_files/jquery.fancybox.pack.js.下載"></script>
+
+<link href="./交通事務局 DSAT_files/css_init.css" rel="stylesheet" type="text/css">
+<link href="./交通事務局 DSAT_files/css.css" rel="stylesheet" type="text/css">
+<link href="./交通事務局 DSAT_files/type_tc.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" media="screen" href="./交通事務局 DSAT_files/coin-slider-styles.css">
+<link rel="stylesheet" media="screen,projection" href="./交通事務局 DSAT_files/ui.totop.css">
+
+<link rel="stylesheet" type="text/css" href="./交通事務局 DSAT_files/jquery.fancybox.css" media="screen">
+<style>
+BODY
+{
+	font-size:13px;
+line-height:23px;
+	}
+</style>
+<script src="./交通事務局 DSAT_files/easing.js.下載" type="text/javascript"></script>
+	<script src="./交通事務局 DSAT_files/cycle.js.下載" type="text/javascript"></script>
+	<script src="./交通事務局 DSAT_files/jquery.ui.totop.js.下載" type="text/javascript"></script>
+	<script type="text/javascript">
+	function reset_search()
+{
+document.form2.keyword.value="";
+document.getElementById("sday").value = "0";
+document.getElementById("smonth").value = "0";
+document.getElementById("syear").value = "0";
+}
+
+function reset_search2()
+{
+document.form2.keyword.value="";
+document.getElementById("category").value = "0";
+document.getElementById("smonth").value = "0";
+document.getElementById("syear").value = "0";
+}
+	
+	
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+		$(document).ready(function() {
+
+
+		$(".fancyimages").fancybox();
+		
+		
+	$("#font_S").click(function(){
+  $.post("change_size.aspx",
+  {
+    size:"S"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+
+$("#font_M").click(function(){
+  $.post("change_size.aspx",
+  {
+    size:"M"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+
+$("#font_L").click(function(){
+  $.post("change_size.aspx",
+  {
+    size:"L"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+
+$("#change_tc").click(function(){
+  $.post("change_lang.aspx",
+  {
+    lang:"tc"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+
+$("#change_sc").click(function(){
+  $.post("change_lang.aspx",
+  {
+    lang:"sc"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+$("#change_pt").click(function(){
+  $.post("change_lang.aspx",
+  {
+    lang:"pt"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+
+$("#change_en").click(function(){
+  $.post("change_lang.aspx",
+  {
+    lang:"en"
+   },
+  function(data,status){
+	  location.reload();
+  });
+});
+	
+	
+	
+$("#driver_icon").hover(
+  function () {
+	  $('#driver_panel').hide();
+	  $('#owner_panel').hide();
+	  $('#passenger_panel').hide();
+    $('#driver_panel').show();
+  }
+);	
+
+$("#driver_panel").hover(
+  function () {
+
+    $('#driver_panel').show();
+  }, 
+  function () {
+    $('#driver_panel').hide();
+  }
+);	
+
+$("#owner_icon").hover(
+  function () {
+  $('#driver_panel').hide();
+	  $('#owner_panel').hide();
+	  $('#passenger_panel').hide();	  
+    $('#owner_panel').show();
+  }
+);	
+
+$("#owner_panel").hover(
+  function () {
+    $('#owner_panel').show();
+  }, 
+  function () {
+    $('#owner_panel').hide();
+  }
+);	
+		
+$("#passenger_icon").hover(
+  function () {
+	    $('#driver_panel').hide();
+	  $('#owner_panel').hide();
+	  $('#passenger_panel').hide();	  
+    $('#passenger_panel').show();
+  }
+);	
+
+$("#passenger_panel").hover(
+  function () {
+    $('#passenger_panel').show();
+  }, 
+  function () {
+    $('#passenger_panel').hide();
+  }
+);				
+		
+		
+		
+	});
+	</script>
+
+<style type="text/css">
+/* for js off, css on */
+ul.tabnavs { 
+    display:none; 
+    }
+
+@media print {
+    ul.tabnavs { display: none; }
+}
+
+</style>
+
+
+
+
+
+<style type="text/css">.fancybox-margin{margin-right:16px;}</style></head>
+
+<body>
+<div class="container_1">
+<div class="mainbody">
+
+
+
+<div id="date_icon">2017/09/02 (星期六) </div>
+
+<div id="driver_icon" class="header_tc">駕駛者</div>
+<div id="owner_icon" class="header_tc">車主</div>
+<div id="passenger_icon" class="header_tc">乘客</div>
+
+<div id="driver_panel" style="display:none" class="pop_tc"><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513149">牌照服務</a> | <a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512100">泊車</a> | <a href="http://www.dsat.gov.mo/dsat/realtime.aspx">即時路面情況</a> | <a href="http://www.dsat.gov.mo/dsat/croad.aspx">交通改道消息</a> | <a href="http://www.dsat.gov.mo/dsat/helmet.aspx" target="_blank">摩托車頭盔</a></div>
+<div id="owner_panel" style="display:none" class="pop_tc"><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513433">車牌號碼</a> | <a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513357">車輛檢驗</a> | <a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512180">車輛</a></div>
+<div id="passenger_panel" style="display:none" class="pop_tc"><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512969">的士收費表</a> | <a href="http://www.dsat.gov.mo/bus" target="_blank">公共巴士資訊站</a></div>
+
+
+<div id="typhoon_icon" class="dsat_s1"></div>
+<div id="weather_icon" class="h_cloudy"></div>
+<div id="font_size"><img src="./交通事務局 DSAT_files/s_font.png" width="44" height="22" usemap="#Map_fontsize" border="0">
+  <map name="Map_fontsize" id="Map_fontsize">
+  <area shape="rect" coords="1,0,16,23" href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="font_S">
+  <area shape="rect" coords="15,0,30,23" href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="font_M">
+    <area shape="rect" coords="29,0,44,23" href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="font_L">
+  </map>
+</div>
+<div id="tempature"><a href="http://www.smg.gov.mo/" target="_blank">溫度:30°C 濕度 76%</a></div>
+<div id="language"><a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="change_tc">繁體中文</a> | <a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="change_sc">简体中文</a> | <a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="change_pt">Português</a> | <a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="change_en">English</a></div>
+ 
+<img src="./交通事務局 DSAT_files/header.jpg" width="1000" height="132">
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="container_2">
+<div class="mainbody">
+
+<table width="1000" border="0" cellpadding="0" cellspacing="0" background="./交通事務局 DSAT_files/main_repeat.jpg">
+<tbody><tr>
+<td width="179" rowspan="2" valign="top">
+
+<a href="http://www.dsat.gov.mo/dsat/croad.aspx"><img src="./交通事務局 DSAT_files/croad_icon_tc.jpg" width="173" height="37"></a><a href="http://m.dsat.gov.mo/index.aspx?lang=tc"><img src="./交通事務局 DSAT_files/mobile_icon_tc.jpg" width="173" height="34"></a>
+
+
+<div class="menu_container" style="height: 288px;">
+<ul id="menu-v"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1441611303">關於我們</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1441611436" class=" arrow">最新消息</a><ul class="sub" style="left: 168px; top: 26px; display: none; visibility: hidden;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1441611470" class=" arrow">活動推廣</a><ul class="sub" style="left: 180px; top: 0px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/events.aspx">活動</a></li><li><a href="http://www.dsat.gov.mo/dsat/album.aspx" target="_blank">活動圖片集</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/news.aspx">新聞</a></li><li><a href="http://www.dsat.gov.mo/dsat/notice.aspx">通告</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1495774836" class=" arrow">道路工程</a><ul class="sub" style="left: 180px; top: 69px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/croad.aspx">交通改道</a></li><li><a href="http://www.dsat.gov.mo/dsat/road_case_study.aspx">臨時措施不足個案</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/video.aspx">宣傳影片</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513626" class=" arrow">規章指引</a><ul class="sub" style="left: 168px; top: 53px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513703" class=" arrow">章程及相關法例</a><ul class="sub" style="left: 180px; top: 0px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459825653" class=" arrow">交通事務局、委員會 </a><ul class="sub" style="left: 180px; top: -3px; display: none;"><li><a href="http://bo.io.gov.mo/bo/i/2008/07/regadm03_cn.asp" target="_blank">第3/2008號行政法規 (交通事務局的組織及運作)</a></li><li><a href="http://bo.io.gov.mo/bo/i/2016/52/extra/despce_cn.asp#525" target="_blank">第525/2016號行政長官批示, 核准《交通事務局費用及價金表》</a></li><li><a href="http://bo.io.gov.mo/bo/i/2011/25/regadm12_cn.asp" target="_blank">第12/2011號行政法規《交通諮詢委員會》</a></li><li><a href="http://bo.io.gov.mo/bo/i/2011/24/despce_cn.asp#145" target="_blank">第145/2011號行政長官批示, 設立《物流業發展委員會》</a></li><li><a href="http://bo.io.gov.mo/bo/i/2008/25/regadm13_cn.asp" target="_blank">第13/2008號行政法規, 《交通高等委員會》, 修改《道路交通規章》第115條</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459828149" class=" arrow">道路交通</a><ul class="sub" style="left: 180px; top: 23px; display: none;"><li><a href="http://bo.io.gov.mo/bo/i/2007/19/lei03_cn.asp" target="_blank">第3/2007號法律《道路交通法》 </a></li><li><a href="http://bo.io.gov.mo/bo/i/93/17/codestcn/declei17an.asp" target="_blank">第17/93/M號法令, 核准《道路法典規章》 </a></li><li><a href="http://bo.io.gov.mo/bo/i/95/52/declei70_cn.asp" target="_blank">第70/95/M號法令, 核准《嘉樂庇大橋、友誼大橋及引橋規章》 </a></li><li><a href="http://bo.io.gov.mo/bo/i/2005/48/regadm21_cn.asp" target="_blank">第21/2005號行政法規, 核准《西灣大橋規章》 </a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459829550" class=" arrow">陸路客運、的士、巴士</a><ul class="sub" style="left: 180px; top: -53px; display: none;"><li><a href="http://bo.io.gov.mo/bo/i/88/25/declei50_cn.asp" target="_blank">第50/88/M號法令,核准澳門運輸法律制度的一般基礎</a></li><li><a href="http://bo.io.gov.mo/bo/i/2004/08/regadm04_cn.asp" target="_blank">第4/2004號行政法規, 核准《陸路跨境客運規章》</a></li><li><a href="http://bo.io.gov.mo/bo/i/87/38/declei62_cn.asp" target="_blank">第62/87/M號法令, 核准批給載客租賃輕型汽車業經營特別准照，無需公開競投（特別的士）</a></li><li><a href="http://bo.io.gov.mo/bo/i/99/42/port366_cn.asp" target="_blank">第366/99/M號訓令, 核准《輕型出租汽車（的士）客運規章》</a></li><li><a href="http://bo.io.gov.mo/bo/i/98/39/port214_cn.asp" target="_blank">第214/98/M號訓令, 核准營業汽車或的士之新收費表</a></li><li><a href="http://bo.io.gov.mo/bo/i/2011/28/despce_cn.asp#168" target="_blank">第168/2011號行政長官批示, 核准道路集體客運公共服務的票價</a></li><li><a href="http://bo.io.gov.mo/bo/i/84/25/declei52_cn.asp" target="_blank">第52/84/M號法令, 管制在本地區不包括司機在內之汽車租賃業務</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459831372">車輛停泊 </a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459840976">駕駛執照及駕駛考試 </a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459841157">車輛進口、註冊及檢驗 </a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459841507">國際公約/協議 </a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1459841562">其他</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513686">《道路交通公約》的國家及地區一覽表</a></li><li><a href="http://www.dsat.gov.mo/tc/images/ConstructionHandBook.pdf" target="_blank">道路工程施工交通管制與安全設施手冊(繁簡體之文字內容出現意義差異時，以繁體字內容為準。) </a></li><li><a href="http://www.dsat.gov.mo/pdf/TrafficSignalHandBook_tc.pdf">道路交通標誌.標記及標線一般工作指引(2016年第二版)</a></li><li><a href="http://www.dsat.gov.mo/pdf/24_2016.pdf">防止捲入裝置的安裝參考指引 </a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513053" class=" arrow">公共服務</a><ul class="sub" style="left: 168px; top: 79px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/procedure_guide.aspx">行政手續指南</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513433" class=" arrow">車牌號碼</a><ul class="sub" style="left: 180px; top: 23px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/5days.aspx">五天車牌號碼抽籤結果</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1483095432" class=" arrow">車輛普通註冊號碼之競投</a><ul class="sub" style="left: 180px; top: 23px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/plate.aspx">可競投之車輛普通註冊號碼</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1483095609" class=" arrow">車輛普通註冊號碼之競投-臨時名單及結果</a><ul class="sub" style="left: 180px; top: 23px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/plateno_tmp.aspx?lang=tc">車輛普通註冊號碼之競投 - 臨時名單</a></li><li><a href="http://www.dsat.gov.mo/dsat/plateno_result.aspx?lang=tc">車輛普通註冊號碼之競投 - 結果</a></li></ul></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1480401457" class=" arrow">競投特別車牌號碼</a><ul class="sub" style="left: 180px; top: 45px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/special_number.aspx">汽車特別車牌號碼</a></li><li><a href="http://www.dsat.gov.mo/dsat/special_number.aspx?current_folder=1200766">重型及輕型摩托車特別車牌號碼</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1480401526" class=" arrow">車牌特別號碼列表</a><ul class="sub" style="left: 180px; top: 45px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/vehicle_number.aspx">汽車特別號碼列表</a></li><li><a href="http://www.dsat.gov.mo/dsat/motor_number.aspx">重型摩托車特別號碼列表</a></li><li><a href="http://www.dsat.gov.mo/dsat/lmotor_number.aspx">輕型摩托車特別號碼列表</a></li></ul></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/images/spec_tc.pdf">車輛註冊號牌技術規格表</a></li><li><a href="http://www.dsat.gov.mo/dsat/images/font_type_tc.pdf">車輛註冊號牌字體規格</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513357" class=" arrow">車輛檢驗</a><ul class="sub" style="left: 180px; top: 45px; display: none;"><li><a href="http://www.dsat.gov.mo/vb/onlinebooking/index?locale=zh_TW" target="_blank">預約驗車</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513393">查詢車輛檢驗日期</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513376" class=" arrow">驗車流程</a><ul class="sub" style="left: 180px; top: 45px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1445842240">汽車</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1445842088">摩托車</a></li></ul></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513149" class=" arrow">牌照服務</a><ul class="sub" style="left: 180px; top: 69px; display: none;"><li><a href="http://www.dsat.gov.mo/forms/carta.pdf">澳門駕駛執照駕駛類別說明</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513176" class=" arrow">駕駛考試</a><ul class="sub" style="left: 180px; top: -61px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/school.aspx">駕駛學校名單/地址/電話</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513291">查詢駕駛考試日期/時段</a></li><li><a href="http://www.dsat.gov.mo/examvacancy/showrs.do" target="_blank">查詢駕駛考試排期</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513256" class=" arrow">駕駛實習考試的路線圖</a><ul class="sub" style="left: 180px; top: 69px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1445844529" class=" arrow">考試中心報告表</a><ul class="sub" style="left: 180px; top: 0px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/doc/065-DDAVC-DLC-v201610.pdf" target="_blank">重型客車</a></li><li><a href="http://www.dsat.gov.mo/dsat/doc/063-DDAVC-DLC-v201610.pdf" target="_blank">其他</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1445843938">考試路線圖</a></li></ul></li><li><a href="http://www.dsat.gov.mo/drivingexampublicnew/" target="_blank">模擬駕駛考試（理論新五冊手冊）－測試版本</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513216" class=" arrow">《駕駛理論測驗》手冊題目（最新版本）</a><ul class="sub" style="left: 180px; top: 89px; display: none;"><li><a href="http://www.dsat.gov.mo/pdf/driving_test6/C_Fascicule1_TrafficSigns.pdf" target="_blank">第一冊 - 交通標誌</a></li><li><a href="http://www.dsat.gov.mo/pdf/driving_test6/C_Fascicule2_RoadConditions.pdf" target="_blank">第二冊 - 路面交通情況</a></li><li><a href="http://www.dsat.gov.mo/pdf/driving_test6/C_Fascicule3_TrafficRegulations.pdf" target="_blank">第三冊 - 交通規則</a></li><li><a href="http://www.dsat.gov.mo/pdf/driving_test6/C_Fascicule4_TrafficOffencesPenalties.pdf" target="_blank">第四冊 - 違規罰則</a></li><li><a href="http://www.dsat.gov.mo/pdf/driving_test6/C_Fascicule5_DrivingSafety.pdf" target="_blank">第五冊 - 安全駕駛</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513198" class=" arrow">各類車輛駕駛實習考試操作指引</a><ul class="sub" style="left: 180px; top: -87px; display: none;"><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_AMD_Cn.pdf" target="_blank">傷殘摩托車駕駛考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_AM_Cn.pdf" target="_blank">摩托車駕駛實習考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_B_Cn.pdf" target="_blank">手動排檔輕型汽車駕駛考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_BA_Cn.pdf" target="_blank">自動排檔輕型汽車駕駛考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_C_Cn.pdf" target="_blank">重型貨車駕駛考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_D1_Cn.pdf" target="_blank">重型客車D1類駕駛實習考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_D2_Cn.pdf" target="_blank">重型客車D2類駕駛實習考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/PracticalDrivingTest_E_Cn.pdf" target="_blank">重型牽引車類駕駛實習考試操作指引</a></li><li><a href="http://www.dsat.gov.mo/pdf/2017_A1_L_D1_D2_tc.pdf" target="_blank">關於摩托車A1小類、輕型汽車、重型客車D1及D2小類於駕駛考核時車輛類別及級別的選擇，以及其駕駛考核方式的指引</a></li></ul></li></ul></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513128">網上預約 / 電子繳費</a></li><li><a href="http://www.dsat.gov.mo/dsat/price.aspx">費用及價金表</a></li><li><a href="http://www.dsat.gov.mo/dsat/realtime.aspx">即時路面情況</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513075">殘疾人士留用車位及車輛識別證</a></li><li><a href="http://www.dsat.gov.mo/dsat/helmet.aspx" target="_blank">摩托車頭盔</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511881" class=" arrow"> 交通運輸</a><ul class="sub" style="left: 168px; top: 105px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512877" class=" arrow">公共交通</a><ul class="sub" style="left: 180px; top: 0px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512931" class=" arrow">的士</a><ul class="sub" style="left: 180px; top: 0px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443513013">的士之規格</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512986" class=" arrow">的士專業工作證考試</a><ul class="sub" style="left: 180px; top: 23px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/taxi_license_list.aspx">的士專業工作證考試名單</a></li><li><a href="http://www.dsat.gov.mo/dsat/taxi_result_list.aspx">的士專業工作證考試結果</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512969">的士收費表</a></li><li><a href="http://www.dsat.gov.mo/pdf/taxi_journal.pdf" target="_blank">行車日誌</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1490945327">特別的士服務</a></li></ul></li><li><a href="http://www.dsat.gov.mo/bus" target="_blank">公共巴士資訊站</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512895">電子付款儲值卡相關服務</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512180" class=" arrow">車輛</a><ul class="sub" style="left: 180px; top: -84px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1478855105">查詢車輛登記狀況及檢驗日期</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1478925662">查詢車輛型號認可、原裝配件及輪胎資料</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512782">車輛配件代號表</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1445850341">車輛使用牌照稅</a></li><li><a href="http://www.dsat.gov.mo/dsat/redirect.aspx?a_id=700013" target="_blank">網上告票查詢(將轉至治安警察局之所屬網頁)</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512522">移走車輛</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512438" class=" arrow">電單車</a><ul class="sub" style="left: 180px; top: 179px; display: none;"><li><a href="http://www.dsat.gov.mo/forms/Motorcyclesample.pdf">摩托車環保證明書樣本</a></li><li><a href="http://www.dsat.gov.mo/forms/MotorcyclesampleE.pdf">摩托車環保證明書樣本(英文)</a></li><li><a href="http://www.dsat.gov.mo/forms/Motorcycle2.pdf">摩托車進口聲明書參考式樣</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512372" class=" arrow">汽車</a><ul class="sub" style="left: 180px; top: 33px; display: none;"><li><a href="http://www.dsat.gov.mo/forms/Car_Less_3500kg_OBD_report.pdf">進口新汽車(總重量少於3500kg)尾氣排放及車載自我診斷系統(OBD)測試報告或證明資料參考式樣</a></li><li><a href="http://www.dsat.gov.mo/forms/Car_over_3500kg_OBD_report.pdf">進口新汽車(總重量等於或大於3500kg)尾氣排放及車載自我診斷系統(OBD)測試報告或證明資料參考式樣</a></li><li><a href="http://www.dsat.gov.mo/forms/Car_OBD_form.pdf">提交車輛尾氣排放及車載自我診斷系統(OBD)證明或報告之聲明書</a></li></ul></li><li><a href="http://www.dsat.gov.mo/forms/Car_OBD_test_lab2.pdf">測試車輛氣體排放之認可實驗室名單</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512100" class=" arrow">泊車</a><ul class="sub" style="left: 180px; top: 45px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512160">咪錶</a></li><li><a href="http://www.dsat.gov.mo/dsat/carpark_info.aspx">停車場資料</a></li><li><a href="http://www.dsat.gov.mo/dsat/carpark_price.aspx">停車場收費</a></li><li><a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx">停車場車位資訊</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511951" class=" arrow">智能交通</a><ul class="sub" style="left: 180px; top: 25px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1490166580">路口綜合偵測系統簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512076">電子告示板簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512056">緊急車輛訊號系統簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512039">超速偵測系統簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512020">違泊偵測系統簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512003">交通監控系統簡介</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511980">衝紅燈偵測系統簡介</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511937">橋樑及隧道</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511914">步行系統</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1494908518" class=" arrow">統計資料</a><ul class="sub" style="left: 180px; top: 137px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/statistic.aspx?lang=tc">交通事務局統計資料</a></li><li><a href="http://www.dsat.gov.mo/dsat/redirect.aspx?a_id=700014" target="_blank">統計暨普查局統計資料</a></li></ul></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511801" class=" arrow">電子表格</a><ul class="sub" style="left: 168px; top: 132px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/dsat_forms.aspx">交通事務局表格</a></li><li><a href="http://www.dsat.gov.mo/dsat/event_forms.aspx">活動表格</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511781">相關網址</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1442998809" class=" arrow">聯絡我們</a><ul class="sub" style="left: 168px; top: 185px; display: none; visibility: hidden;"><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511764">常用電話</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511746">投訴及諮詢熱線</a></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511726">服務地點及時間</a></li><li><a href="http://www.dsat.gov.mo/dsat/suggestion.aspx">意見欄</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1481112356" class=" arrow">採購 / 招標  項目</a><ul class="sub" style="left: 168px; top: 212px; display: none;"><li><a href="http://www.dsat.gov.mo/dsat/tender.aspx?a_type=1">公開招標</a></li><li><a href="http://www.dsat.gov.mo/dsat/tender.aspx?a_type=2">書面諮詢</a></li><li><a href="http://www.dsat.gov.mo/dsat/tender.aspx?a_type=3">直接判給</a></li></ul></li><li><a href="http://www.dsat.gov.mo/dsat/recruit.aspx"> 通告 (「入職開考」及「晉級開考」)</a></li></ul>
+</div>
+<img src="./交通事務局 DSAT_files/menu_tel_tc.jpg" width="169" height="82">
+<div style="padding-left:8px;padding-bottom:15px;">
+<form id="formsearch1" name="formsearch1" method="post" action="http://www.dsat.gov.mo/dsat/search.aspx">
+      <div align="center"><table border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td><img src="./交通事務局 DSAT_files/search_icon.jpg" width="25" height="25"></td>
+            <td><input name="keyword" type="text" id="keyword" size="5">
+            <input type="submit" name="submit_search" id="submit_search" value="搜尋"></td>
+          </tr>
+        </tbody></table>
+      </div>
+      </form>
+<script src="./交通事務局 DSAT_files/AC_RunActiveContent.js.下載" type="text/javascript"></script>
+        
+
+</div>
+<script>
+ var mcVM_options={menuId:"menu-v",alignWithMainMenu:true};
+$(document).ready(function() {
+ $(".menu_container").css("height",$("#menu-v").height()-2);
+});
+  </script>
+</td>
+<td>
+<div id="nav" class="nav"><a href="http://www.dsat.gov.mo/dsat/index.aspx">主頁</a> &gt; <a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443511881"> 交通運輸</a> &gt; <a href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1443512100">泊車</a> &gt; <a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx">停車場車位資訊</a> &gt; </div>
+</td> </tr><tr>
+  <td>
+    
+    <div id="my_content" class="my_content">
+      <p class="content_title">停車場車位資訊</p>
+      
+      
+  
+        <iframe src="./交通事務局 DSAT_files/carpark_realtime_core.html" width="810" height="1400" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+
+      
+      </div>    
+    
+    
+    </td>
+</tr>
+  </tbody></table>
+
+</div> 
+ 
+
+<script>
+var mcVM_options={menuId:"menu-v",alignWithMainMenu:true};
+$(document).ready(function() {
+    $('#slideshow').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+</div>
+
+<div class="container_3">
+<div class="mainbody">
+<div class="my_content_footer">
+
+<div align="center" style="background-image:url(images/footer.jpg)">
+  <table width="1000" border="0" cellspacing="0" cellpadding="2" class="white_text">
+    <tbody><tr>
+      <td width="481">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2015 DSAT. All right reserved.</td>
+      <td width="519"><div align="right">
+        | <a class="footer_link" href="http://www.dsat.gov.mo/dsat/search.aspx">搜尋</a>  | <a class="footer_link" href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1446093624">RSS</a> | <a class="footer_link" href="http://www.dsat.gov.mo/dsat/sitemap.aspx">網站地圖</a>  | <a class="footer_link" href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1444641136">使用條款</a>  | <a class="footer_link" href="http://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1444641209">私隱聲明</a>  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      
+      <div align="center">最後修改日期:02-09-2017
+        
+      </div></td>
+      </tr>
+  </tbody></table>
+ </div>
+ 
+</div>
+</div>
+
+
+</div><a href="http://www.dsat.gov.mo/dsat/carpark_realtime.aspx#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body></html>

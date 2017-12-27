@@ -1,0 +1,10 @@
+    $(document).bind("mobileinit", function () {
+      $.mobile.defaultPageTransition = 'none';
+       
+       $.mobile.ajaxEnabled = true;
+	   //$.mobile.hashListeningEnabled = false;
+       $.mobile.pageLoadErrorMessage = 'Connection lost or not stable!';
+	  // $.mobile.linkBindingEnabled = false;
+$.mobile.pushStateEnabled=false;
+    });
+	

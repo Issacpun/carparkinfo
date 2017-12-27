@@ -1,0 +1,169 @@
+.menu_container
+{
+
+	top:0px;
+	left:0px;
+	width:160px;
+}
+
+.tabnavs li
+{
+		font-size:13px;
+		line-height:18px;
+	}
+#menu-v li, #menu-v a {zoom:1;} /* Hacks for IE6, IE7 */
+#menu-v, #menu-v ul
+{
+	    position:absolute;
+    width: 168px; /* Main Menu Item widths */
+/*    border: 1px solid #ccc;*/
+    border-top:none;
+	font-size:0;
+    list-style: none; margin: 0; padding: 0; display:block;
+    z-index:9;
+	top:70px;
+	left:0px;
+text-align:center; 
+z-index:1010;
+font-weight:bold;
+
+
+
+}
+                
+/* Top level menu links style
+---------------------------------------*/
+
+#menu-v li
+{
+	
+	
+    background: #00aeef;
+    list-style: none; margin: 0; padding: 0;
+	border-bottom: 1px solid #FFF;
+	border-right: 1px solid #DDD;
+		background-image:url(images/menu_back.jpg);
+	
+}
+#menu-v li:hover
+{
+	background-image:url(images/menu_back_hover.jpg);
+	
+}
+#menu-v li a
+{
+    font-size:15px;
+    display: block;
+    /*overflow: auto; force hasLayout in IE7 */
+    color: #000;
+    text-decoration: none;
+    line-height:26px;
+	
+     
+}
+
+
+#menu-v li a:hover
+{
+    color: #069;
+	
+	
+	
+}
+
+
+#menu-v ul li a
+{
+    line-height:21px;
+		color:#069;
+		font-size:12px;
+		
+}
+                
+#menu-v li a.arrow:hover
+{
+    background-image:url(images/arrow_small.png);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+	
+}
+        
+/*Sub level menu items
+---------------------------------------*/
+#menu-v li ul
+{
+    position: absolute;
+    width: 180px; /*Sub Menu Items width */
+    visibility:hidden;
+	font-size:small;
+
+}
+        
+#menu-v a.arrow
+{
+    background-image:url(images/arrow_small.png);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+
+
+
+#menu-v li:hover, #menu-v li.onhover
+{
+
+}
+
+
+
+/*#menu-v ul li:first-child
+{
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;	
+}
+
+#menu-v ul li:last-child
+{
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+}
+*/
+#menu-v ul li
+{
+    background:#fffad6;
+    background-image:url(images/menu_back.jpg);
+	border: 1px solid #EEE;
+	color:#24a55d;
+}
+
+
+#menu-v ul li:hover, #menu-v ul li.onhover
+{
+    background: #c9ea42;
+		color:#2a985d;
+				background-image:url(images/menu_back_hover.jpg);
+}
+
+#menu-v ul
+{
+	
+}
+        
+.sub_content_title
+{
+	font-weight:bold;
+	font-size:normal;
+	color:#069;
+}
+
+
+/* Holly Hack for IE \
+* html #menu-v  li
+{
+    float:left;
+    height: 1%;
+}
+* html #menu-v  li a
+{
+    height: 1%;
+}*/
+/* End */
